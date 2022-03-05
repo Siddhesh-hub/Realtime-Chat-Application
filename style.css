@@ -60,11 +60,12 @@ body{
 }
 
 .form .name-details .field:first-child{
-    margin-last: 10px;
+    margin-left: 10px;
 }
 
 .form form .field{
     display: flex;
+    position: relative;
     flex-direction: column;
     margin-bottom: 10px;
 }
@@ -116,4 +117,14 @@ body{
 
 .form .link a:hover{
     text-decoration: underline;
+}
+
+/* Login form CSS*/
+.form form .field i{
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
