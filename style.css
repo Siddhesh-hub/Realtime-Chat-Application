@@ -41,6 +41,7 @@ body{
 }
 
 .form form .error-txt{
+    display: none;
     color: #721c24;
     background: #f8d7da;
     padding: 8px 10px;
@@ -59,7 +60,7 @@ body{
     margin-right: 10px;
 }
 
-.form .name-details .field:first-child{
+.form .name-details .field:last-child{
     margin-left: 10px;
 }
 
@@ -188,6 +189,7 @@ body{
     position: relative;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .users .search .text{
@@ -203,6 +205,14 @@ body{
     font-size: 16px;
     border-radius: 5px;
     outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .users .search button{
@@ -210,11 +220,21 @@ body{
     height: 42px;
     border: none;
     outline: none;
-    color: #fff;
-    background: #333;
+    color: #333;
+    background: #fff;
     cursor: pointer;
     font-size: 17px;
     border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease;
+}
+
+.users .search button.active{
+    color: #fff;
+    background: #333;
+}
+
+.users .search button.active i::before{
+    content: "\f00d";
 }
 
 .users-list{
